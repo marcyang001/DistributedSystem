@@ -17,20 +17,20 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "ResourceManagerImplService", targetNamespace = "http://middleware/", wsdlLocation = "http://localhost:6666/middle/service?wsdl")
+@WebServiceClient(name = "ResourceManagerImplService", targetNamespace = "http://server/", wsdlLocation = "http://localhost:8080/flight/service?wsdl")
 public class ResourceManagerImplService
     extends Service
 {
 
     private final static URL RESOURCEMANAGERIMPLSERVICE_WSDL_LOCATION;
     private final static WebServiceException RESOURCEMANAGERIMPLSERVICE_EXCEPTION;
-    private final static QName RESOURCEMANAGERIMPLSERVICE_QNAME = new QName("http://middleware/", "ResourceManagerImplService");
+    private final static QName RESOURCEMANAGERIMPLSERVICE_QNAME = new QName("http://server/", "ResourceManagerImplService");
 
     static {
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:6666/middle/service?wsdl");
+            url = new URL("http://localhost:8080/flight/service?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
@@ -69,7 +69,7 @@ public class ResourceManagerImplService
      */
     @WebEndpoint(name = "ResourceManagerImplPort")
     public ResourceManager getResourceManagerImplPort() {
-        return super.getPort(new QName("http://middleware/", "ResourceManagerImplPort"), ResourceManager.class);
+        return super.getPort(new QName("http://server/", "ResourceManagerImplPort"), ResourceManager.class);
     }
 
     /**
@@ -81,7 +81,7 @@ public class ResourceManagerImplService
      */
     @WebEndpoint(name = "ResourceManagerImplPort")
     public ResourceManager getResourceManagerImplPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://middleware/", "ResourceManagerImplPort"), ResourceManager.class, features);
+        return super.getPort(new QName("http://server/", "ResourceManagerImplPort"), ResourceManager.class, features);
     }
 
     private static URL __getWsdlLocation() {

@@ -49,13 +49,13 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
         } catch (MalformedURLException e) {
             System.out.println("Connecting to the car server " + c_host + " "+ c_port);
         }
-        /*
+/*
         try {
             roomProxy = new WSClient(r_name, r_host, r_port);
         } catch (MalformedURLException e) {
             System.out.println("Connecting to the room server");
         }
-        */
+*/
 
 
 
@@ -70,7 +70,7 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
 
         flightAdded = flightProxy.proxy.addFlight(id, flightNumber, numSeats, flightPrice);
         if (flightAdded) {
-            System.out.println("SENT the addFlight command to the flight server");
+            System.out.println("SENT the addFlight command to the flight server:" + f_host + ":" + f_port);
         }
         else {
             System.out.println("FAIL to sent to flight server");
@@ -97,12 +97,22 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
 
     @Override
     public int queryFlight(int id, int flightNumber) {
-        return 0;
+
+        int flightNum = flightProxy.proxy.queryFlight(id, flightNumber);
+
+        System.out.println("QUERY the flight with ID:" + id);
+
+        return flightNum;
     }
 
     @Override
     public int queryFlightPrice(int id, int flightNumber) {
-        return 0;
+
+        int flightPrice = flightProxy.proxy.queryFlightPrice(id, flightNumber);
+
+        System.out.println("QUERY the flight price with ID: " + id);
+
+        return flightPrice;
     }
 
     @Override
@@ -111,7 +121,7 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
         boolean carsAdded;
         carsAdded = carProxy.proxy.addCars(id,location, numCars, carPrice);
         if (carsAdded) {
-            System.out.println("SENT the addCar command to the car server:" + f_host + ":" + f_port);
+            System.out.println("SENT the addCar command to the car server:" + c_host + ":" + c_port);
         }
         else {
             System.out.println("FAIL to add cars");
@@ -137,30 +147,61 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
 
     @Override
     public int queryCars(int id, String location) {
-        return 0;
+
+        int carNum = carProxy.proxy.queryCars(id, location);
+
+        System.out.println("QUERY the car with ID: " + id);
+
+        return carNum;
     }
 
     @Override
     public int queryCarsPrice(int id, String location) {
-        return 0;
+
+        int carPrice = carProxy.proxy.queryCarsPrice(id, location);
+
+        System.out.println("QUERY the car price with ID: " + id);
+
+
+        return carPrice;
     }
 
     @Override
     public boolean addRooms(int id, String location, int numRooms, int roomPrice) {
 
+        boolean roomsAdded = roomProxy.proxy.addRooms(id, location, numRooms, roomPrice);
 
+        if (roomsAdded) {
+            System.out.println("EXECUTE the addRoom command to the room server: "+r_host +":"+r_port);
+        }
+        else {
+            System.out.println("FAIL to add rooms to the room server: "+r_host + ":" +r_port);
+        }
 
-        return false;
+        return roomsAdded;
     }
 
     @Override
     public boolean deleteRooms(int id, String location) {
-        return false;
+
+        boolean roomDeleted = roomProxy.proxy.deleteRooms(id, location);
+
+        if (roomDeleted) {
+            System.out.println("EXECUTE the deleteRoom command to the rooom server: "+r_host + ":" +r_port);
+        }
+        else {
+            System.out.println("FAIL to delete rooms");
+        }
+        return roomDeleted;
     }
 
     @Override
     public int queryRooms(int id, String location) {
-        return 0;
+
+        int roomquery = roomProxy.proxy.queryRooms(id, location);
+        System.out.println("QUERY the room with ID: "+ id);
+
+        return roomquery;
     }
 
     @Override
@@ -168,6 +209,8 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
         return 0;
     }
 
+
+    /** Do the customer logic in the middleware **/
     @Override
     public int newCustomer(int id) {
         return 0;
@@ -188,23 +231,49 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
         return null;
     }
 
+    /** Do the customer logic in the middleware **/
+
+    /** Each customer needs to:
+     * reserve flights
+     * reserve cars
+     * reserve room
+     *
+     * Thus, inside these methods, they need to call to their respective servers
+     * such as flight server 8080, car server 8082 and room server 8084
+     * in order to complete the transactions
+     * **/
+
     @Override
     public boolean reserveFlight(int id, int customerId, int flightNumber) {
+
+        /** call methods from the flight server to execute actions **/
+
+
         return false;
     }
 
     @Override
     public boolean reserveCar(int id, int customerId, String location) {
+
+        /** call methods from the car server to execute actions **/
+
+
         return false;
     }
 
     @Override
     public boolean reserveRoom(int id, int customerId, String location) {
+
+        /** call methods from the room server to execute actions **/
+
         return false;
     }
 
     @Override
     public boolean reserveItinerary(int id, int customerId, Vector flightNumbers, String location, boolean car, boolean room) {
+
+        /** call methods from all three servers to execute actions **/
+
         return false;
     }
 }
