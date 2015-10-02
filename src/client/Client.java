@@ -8,8 +8,8 @@ import java.io.*;
 
 public class Client extends WSClient {
 
-    public Client(String serviceName, String serviceHost, int servicePort) 
-    throws Exception {
+    public Client(String serviceName, String serviceHost, int servicePort)
+            throws Exception {
         super(serviceName, serviceHost, servicePort);
     }
 

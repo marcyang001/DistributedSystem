@@ -7,9 +7,9 @@ import java.net.MalformedURLException;
 
 public class WSClient {
 
-    client.ResourceManagerImplService service;
+    public client.ResourceManagerImplService service;
 
-    client.ResourceManager proxy;
+    public client.ResourceManager proxy;
 
 
     public WSClient(String serviceName, String serviceHost, int servicePort) 

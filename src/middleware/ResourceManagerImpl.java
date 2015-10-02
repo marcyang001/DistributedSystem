@@ -13,9 +13,50 @@ import java.util.Vector;
 public class ResourceManagerImpl implements server.ws.ResourceManager {
 
     WSClient flightProxy;
+    WSClient carProxy;
+    WSClient roomProxy;
+
+    //flight server properties
+    String f_name = "flight";
+    String f_host = "localhost";
+    int f_port = 8080;
+
+
+    //car server properties
+    String c_name = "car";
+    String c_host = "localhost";
+    int c_port = 8082;
+
+    //room server properties
+    String r_name = "room";
+    String r_host = "localhost";
+    int r_port = 8084;
+
 
     //constructor that creates proxies to each server
     public ResourceManagerImpl() {
+
+        try {
+            flightProxy = new WSClient(f_name, f_host, f_port);
+            System.out.println("middleware is connected to the flight server: " +f_host + " " +f_port);
+
+        } catch (MalformedURLException e) {
+            System.out.println("Connecting to the flight server");
+        }
+
+        try {
+            carProxy = new WSClient(c_name, c_host, c_port);
+        } catch (MalformedURLException e) {
+            System.out.println("Connecting to the car server " + c_host + " "+ c_port);
+        }
+        /*
+        try {
+            roomProxy = new WSClient(r_name, r_host, r_port);
+        } catch (MalformedURLException e) {
+            System.out.println("Connecting to the room server");
+        }
+        */
+
 
 
     }
@@ -25,23 +66,33 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
     @Override
     public boolean addFlight(int id, int flightNumber, int numSeats, int flightPrice) {
 
+        boolean flightAdded;
 
-
-        System.out.println("Hello World!!!");
-
-        try {
-            flightProxy = new WSClient("flight", "localhost", 8080);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
+        flightAdded = flightProxy.proxy.addFlight(id, flightNumber, numSeats, flightPrice);
+        if (flightAdded) {
+            System.out.println("SENT the addFlight command to the flight server");
         }
-
-
-        return true;
+        else {
+            System.out.println("FAIL to sent to flight server");
+        }
+        return flightAdded;
     }
 
     @Override
     public boolean deleteFlight(int id, int flightNumber) {
-        return false;
+
+        boolean flightDeleted;
+
+        flightDeleted = flightProxy.proxy.deleteFlight(id, flightNumber);
+
+        if (flightDeleted) {
+            System.out.println("DELETED flight " + flightNumber);
+        }
+        else {
+            System.out.println("FAIL to delete flight");
+        }
+
+        return flightDeleted;
     }
 
     @Override
@@ -56,12 +107,32 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
 
     @Override
     public boolean addCars(int id, String location, int numCars, int carPrice) {
-        return false;
+
+        boolean carsAdded;
+        carsAdded = carProxy.proxy.addCars(id,location, numCars, carPrice);
+        if (carsAdded) {
+            System.out.println("SENT the addCar command to the car server:" + f_host + ":" + f_port);
+        }
+        else {
+            System.out.println("FAIL to add cars");
+        }
+        return carsAdded;
     }
 
     @Override
     public boolean deleteCars(int id, String location) {
-        return false;
+
+        boolean carsDeleted;
+        carsDeleted = carProxy.proxy.deleteCars(id, location);
+
+        if(carsDeleted) {
+            System.out.println("DELETE cars " + id);
+        }
+        else {
+            System.out.println("FAIL to delete cars ");
+        }
+
+        return carsDeleted;
     }
 
     @Override
@@ -76,6 +147,9 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
 
     @Override
     public boolean addRooms(int id, String location, int numRooms, int roomPrice) {
+
+
+
         return false;
     }
 
