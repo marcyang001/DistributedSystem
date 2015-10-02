@@ -560,6 +560,10 @@ public class Client extends WSClient {
                     e.printStackTrace();
                 }
                 break;
+
+
+
+
                 
             default:
                 System.out.println("The interface does not support this command.");
@@ -822,6 +826,7 @@ public class Client extends WSClient {
             System.out.println("\nUsage: ");
             System.out.println("\tnewcustomerid, <id>, <customerid>");
             break;
+
 
             default:
             System.out.println(command);

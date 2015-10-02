@@ -8,6 +8,7 @@
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/etc" relative="/WEB-INF" />
+          <root url="file://$MODULE_DIR$/lib" relative="/" />
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src" />

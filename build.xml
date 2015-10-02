@@ -8,7 +8,7 @@
 
     <property name="middleware.name" value="middle"/>
     <property name="middleware.host" value="localhost"/>
-    <property name="middleware.port" value="6659"/>
+    <property name="middleware.port" value="6666"/>
 
 
 
@@ -102,17 +102,7 @@
     <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
         <classpath refid="jaxws.classpath"/>
     </taskdef>
-    <!--
-    <target name="generate-client" depends="setup">
-        <wsimport
-                quiet="true"
-                keep="true"
-                destdir="${basedir}/build/classes"
-                package="client"
-                wsdl="http://${service.host}:${service.port}/${service.name}/service?wsdl">
-        </wsimport>
-    </target>
-    -->
+
 
     <!--MIDDLEWARE target -->
     <target name="build-middleware">
@@ -145,12 +135,10 @@
     <target name="create-war-middleware">
         <war
                 warfile="${basedir}/build/war/${middleware.name}.war"
-                webxml="etc/web.xml">
-            <webinf dir="${basedir}/etc" includes="sun-jaxws.xml"/>
-            <zipfileset
-                    dir="${basedir}/etc"
-                    includes="*.wsdl, *.xsd"
-                    prefix="WEB-INF/wsdl"/>
+                webxml="src/middleware/web.xml">
+            <!-- change the directory -->
+            <webinf dir="${basedir}/src/middleware" includes="sun-jaxws.xml"/>
+            <!-- change the directory -->
             <classes dir="${basedir}/build/classes"/>
         </war>
     </target>
@@ -179,45 +167,6 @@
     </target>
 
     <!--End of middleware -->
-
-    <!--middlewareClient -->
-
-    <target name="generate-middleware-client" depends="setup">
-        <wsimport
-                quiet="true"
-                keep="true"
-                destdir="${basedir}/build/classes"
-                package="client"
-                wsdl="http://${middleware.host}:${middleware.port}/${middleware.name}/service?wsdl">
-        </wsimport>
-
-    </target>
-    <target name="build-middleware-client" depends="generate-middleware-client">
-
-        <javac
-                fork="true"
-                srcdir="${basedir}/src"
-                destdir="${basedir}/build/classes"
-                includes="middleware/**">
-            <classpath refid="jaxws.classpath"/>
-        </javac>
-    </target>
-
-
-    <target name="middlewareClient" depends="build-middleware-client">
-        <java classname="middleware.MiddlewareClient">
-            <classpath>
-                <path refid="jaxws.classpath"/>
-                <pathelement location="${basedir}/build/classes"/>
-            </classpath>
-            <arg value="${middleware.name}"/>
-            <arg value="${middleware.host}"/>
-            <arg value="${middleware.port}"/>
-        </java>
-    </target>
-    <!-- end of middlewareClient -->
-
-
 
 
     <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">

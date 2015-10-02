@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "ResourceManagerImplService", targetNamespace = "http://server/", wsdlLocation = "http://localhost:8082/flight/service?wsdl")
+@WebServiceClient(name = "ResourceManagerImplService", targetNamespace = "http://server/", wsdlLocation = "http://localhost:8080/flight/service?wsdl")
 public class ResourceManagerImplService
     extends Service
 {
@@ -30,7 +30,7 @@ public class ResourceManagerImplService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8082/flight/service?wsdl");
+            url = new URL("http://localhost:8080/flight/service?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
