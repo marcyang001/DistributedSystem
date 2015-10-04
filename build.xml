@@ -151,6 +151,14 @@
                 includes="main/**">
             <classpath refid="jaxws.classpath"/>
         </javac>
+        <javac
+                fork="true"
+                srcdir="${basedir}/src"
+                destdir="${basedir}/build"
+                includes="middleware/**">
+            <classpath refid="jaxws.classpath"/>
+        </javac>
+
     </target>
 
 
@@ -187,7 +195,7 @@
 
 
 
-
+    <!--
     <target name="generate-client" depends="setup">
         <wsimport
                 quiet="true"
@@ -197,9 +205,9 @@
                 wsdl="http://${service.host}:${service.port}/${service.name}/service?wsdl">
         </wsimport>
     </target>
+    -->
 
-
-    <target name="build-client" depends="generate-client">
+    <target name="build-client">
         <javac
                 fork="true"
                 srcdir="${basedir}/src"
@@ -210,7 +218,7 @@
     </target>
 
     <target name="client" depends="build-client">
-        <java classname="client.Client">
+        <java classname="client.ClientMain">
             <classpath>
                 <path refid="jaxws.classpath"/>
                 <pathelement location="${basedir}/build/classes"/>

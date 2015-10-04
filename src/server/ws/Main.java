@@ -1,53 +1,47 @@
 package server.ws;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.File;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.startup.Tomcat;
-import server.Car;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.SocketTimeoutException;
 
-public class Main {
 
-    public static void main(String[] args) throws Exception {
+public class Main extends Thread {
 
-        System.out.println("This is the main method for tomcat");
+
+    public static void main(String[] args) {
+        System.out.println("This is the main method for server");
 
         if (args.length != 3) {
             System.out.println(
-                "Usage: java Main <service-name> <service-port> <deploy-dir>");
+                    "Usage: java Main <service-name> <service-port> <deploy-dir>");
             System.exit(-1);
         }
-
         String serviceName = args[0];
         int port = Integer.parseInt(args[1]);
         String deployDir = args[2];
-    
-        Tomcat tomcat = new Tomcat();
-        tomcat.setPort(port);
-        tomcat.setBaseDir(deployDir);
-
-        tomcat.getHost().setAppBase(deployDir);
-        tomcat.getHost().setDeployOnStartup(true);
-        tomcat.getHost().setAutoDeploy(true);
-
-
-        //tomcat.addWebapp("", new File(deployDir).getAbsolutePath());
-
-        tomcat.addWebapp("/" + serviceName, 
-                new File(deployDir + "/" + serviceName).getAbsolutePath());
-
-        tomcat.start();
-        tomcat.getServer().await();
-
-
-
-
-
-
+        try
+        {
+            ServerThread s = new ServerThread(port);
+            Thread t = new Thread(s);
+            t.start();
+        }catch(IOException e)
+        {
+            e.printStackTrace();
+        }
 
 
     }
 
 
 
-    
+
 }
+
+
+
+
+

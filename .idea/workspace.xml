@@ -1,21 +1,617 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f499d9f5-0853-4832-ba9d-a8d10b5eb6c3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/middleware/ResourceManagerImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/main/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/server/Car.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/server/RMItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/server/ReservableItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/war/middle.war" afterPath="" />
+    <list default="true" id="f0b9614d-a1c8-4019-8deb-10c64dfcc5ad" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/client/ClientMain.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/server/ws/ServerThread.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/AddCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/AddCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/AddCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/AddCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/AddFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/AddFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/AddFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/AddFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/AddRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/AddRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/AddRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/AddRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/Client.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/DeleteRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/NewCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/NewCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/NewCustomerId.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/NewCustomerId.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/NewCustomerIdResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/NewCustomerIdResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/NewCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/NewCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ObjectFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ObjectFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryCarsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryCarsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryCarsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryCarsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryCustomerInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryCustomerInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryCustomerInfoResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryCustomerInfoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryFlightPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryFlightPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryFlightPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryFlightPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryRoomsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryRoomsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryRoomsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryRoomsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/QueryRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveCar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveCar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveCarResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveCarResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveItinerary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveItinerary.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveItineraryResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveItineraryResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveRoom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveRoom.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveRoomResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ReserveRoomResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ResourceManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ResourceManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ResourceManagerImplService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/ResourceManagerImplService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/WSClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/package-info.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/client/package-info.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/AddCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/AddCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/AddCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/AddCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/AddFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/AddFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/AddFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/AddFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/AddRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/AddRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/AddRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/AddRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/DeleteRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/NewCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/NewCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/NewCustomerId.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/NewCustomerId.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/NewCustomerIdResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/NewCustomerIdResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/NewCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/NewCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryCarsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryCarsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryCarsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryCarsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryCustomerInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryCustomerInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryCustomerInfoResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryCustomerInfoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryFlightPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryFlightPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryFlightPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryFlightPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryRoomsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryRoomsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryRoomsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryRoomsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/QueryRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveCar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveCar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveCarResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveCarResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveItinerary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveItinerary.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveItineraryResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveItineraryResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveRoom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveRoom.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveRoomResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/server/ws/jaxws/ReserveRoomResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/war/flight.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/Client.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/client/WSClient.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/AddCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/AddCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/AddCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/AddCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/AddFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/AddFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/AddFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/AddFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/AddRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/AddRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/AddRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/AddRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/DeleteRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/NewCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/NewCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/NewCustomerId.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/NewCustomerId.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/NewCustomerIdResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/NewCustomerIdResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/NewCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/NewCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryCarsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryCarsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryCarsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryCarsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfoResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryFlightPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryFlightPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryFlightPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryFlightPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryRoomsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryRoomsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryRoomsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryRoomsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/QueryRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveCar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveCar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveCarResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveCarResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveItinerary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveItinerary.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveItineraryResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveItineraryResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveRoom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveRoom.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveRoomResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/jaxws/ReserveRoomResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/AddCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/AddCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/AddCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/AddCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/AddFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/AddFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/AddFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/AddFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/AddRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/AddRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/AddRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/AddRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/DeleteRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/NewCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/NewCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/NewCustomerId.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/NewCustomerId.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/NewCustomerIdResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/NewCustomerIdResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/NewCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/NewCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryCarsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryCarsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryCarsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryCarsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfoResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryFlightPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryFlightPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryFlightPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryFlightPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryRoomsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryRoomsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryRoomsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryRoomsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/QueryRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveCar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveCar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveCarResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveCarResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveItinerary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveItinerary.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveItineraryResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveItineraryResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveRoom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveRoom.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveRoomResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/jaxws/ReserveRoomResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/AddCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/AddCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/AddCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/AddCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/AddFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/AddFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/AddFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/AddFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/AddRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/AddRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/AddRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/AddRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/Client.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/DeleteRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/NewCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/NewCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/NewCustomerId.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/NewCustomerId.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/NewCustomerIdResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/NewCustomerIdResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/NewCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/NewCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ObjectFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ObjectFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryCarsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryCarsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryCarsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryCarsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryCustomerInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryCustomerInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryCustomerInfoResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryCustomerInfoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryFlightPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryFlightPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryFlightPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryFlightPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryRoomsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryRoomsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryRoomsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryRoomsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/QueryRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveCar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveCar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveCarResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveCarResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveItinerary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveItinerary.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveItineraryResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveItineraryResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveRoom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveRoom.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveRoomResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ReserveRoomResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ResourceManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ResourceManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ResourceManagerImplService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/ResourceManagerImplService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/WSClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/package-info.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/client/package-info.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/AddCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/AddCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/AddCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/AddCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/AddFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/AddFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/AddFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/AddFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/AddRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/AddRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/AddRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/AddRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/DeleteRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/NewCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/NewCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/NewCustomerId.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/NewCustomerId.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/NewCustomerIdResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/NewCustomerIdResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/NewCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/NewCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryCarsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryCarsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryCarsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryCarsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfoResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryFlightPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryFlightPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryFlightPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryFlightPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryRoomsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryRoomsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryRoomsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryRoomsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/QueryRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveCar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveCar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveCarResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveCarResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveItinerary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveItinerary.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveItineraryResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveItineraryResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveRoom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveRoom.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveRoomResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/jaxws/ReserveRoomResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/AddCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/AddCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/AddCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/AddCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/AddFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/AddFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/AddFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/AddFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/AddRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/AddRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/AddRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/AddRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/DeleteRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/NewCustomer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/NewCustomer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/NewCustomerId.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/NewCustomerId.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/NewCustomerIdResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/NewCustomerIdResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/NewCustomerResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/NewCustomerResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryCars.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryCars.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryCarsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryCarsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryCarsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryCarsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryCarsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryCarsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfoResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryCustomerInfoResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryFlightPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryFlightPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryFlightPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryFlightPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryRooms.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryRooms.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryRoomsPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryRoomsPrice.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryRoomsPriceResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryRoomsPriceResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryRoomsResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/QueryRoomsResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveCar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveCar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveCarResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveCarResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveFlight.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveFlight.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveFlightResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveFlightResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveItinerary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveItinerary.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveItineraryResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveItineraryResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveRoom.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveRoom.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveRoomResponse.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/jaxws/ReserveRoomResponse.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/server/ws/Main.class" afterPath="$PROJECT_DIR$/build/classes/server/ws/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/Main.class" afterPath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ws/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/Main.class" afterPath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ws/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/Main.class" afterPath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ws/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/Main.class" afterPath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ws/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/server/ResourceManagerImpl.class" afterPath="$PROJECT_DIR$/build/classes/server/ResourceManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ResourceManagerImpl.class" afterPath="$PROJECT_DIR$/webapps/car/WEB-INF/classes/server/ResourceManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ResourceManagerImpl.class" afterPath="$PROJECT_DIR$/webapps/flight/WEB-INF/classes/server/ResourceManagerImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/middleware/ResourceManagerImpl.class" afterPath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/middleware/ResourceManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/client/ResourceManagerImplService.class" afterPath="$PROJECT_DIR$/build/classes/client/ResourceManagerImplService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/war/flight.war" afterPath="$PROJECT_DIR$/build/war/flight.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ResourceManagerImpl.class" afterPath="$PROJECT_DIR$/webapps/middle/WEB-INF/classes/server/ResourceManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ResourceManagerImpl.class" afterPath="$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/ResourceManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/ws/Main.java" afterPath="$PROJECT_DIR$/src/server/ws/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/middleware/ResourceManagerImpl.java" afterPath="$PROJECT_DIR$/src/middleware/ResourceManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/client/ResourceManagerImplService.java" afterPath="$PROJECT_DIR$/build/classes/client/ResourceManagerImplService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/ResourceManagerImpl.java" afterPath="$PROJECT_DIR$/src/server/ResourceManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <ignored path="p1.iws" />
+    <ignored path="p1-TCP.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -32,85 +628,15 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="p1" />
+    <favorites_list name="p1-TCP" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="WSClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/WSClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.962963">
-              <caret line="120" column="29" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3703704">
-              <caret line="167" column="44" selection-start-line="167" selection-start-column="44" selection-end-line="167" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourceManagerImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/middleware/ResourceManagerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4665523">
-              <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5517#5518#0" expanded="true" />
-                <element signature="e#5541#5542#0" expanded="true" />
-                <element signature="e#5646#5647#0" expanded="true" />
-                <element signature="e#5670#5671#0" expanded="true" />
-                <element signature="e#5744#5745#0" expanded="true" />
-                <element signature="e#5772#5773#0" expanded="true" />
-                <element signature="e#5847#5848#0" expanded="true" />
-                <element signature="e#5875#5876#0" expanded="true" />
-                <element signature="e#5952#5953#0" expanded="true" />
-                <element signature="e#5979#5980#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourceManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/ws/ResourceManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -125,25 +651,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/server/ws/rmflight.java" />
-        <option value="$PROJECT_DIR$/src/server/ws/CarServelet.java" />
-        <option value="$PROJECT_DIR$/src/server/ws/Main.java" />
-        <option value="$PROJECT_DIR$/src/server/ws/FlightServelet.java" />
-        <option value="$PROJECT_DIR$/src/server/ws/RoomServelet.java" />
-        <option value="$PROJECT_DIR$/src/middleware/MiddlewareManger.java" />
-        <option value="$PROJECT_DIR$/src/middleware/Main.java" />
-        <option value="$PROJECT_DIR$/src/middleware/Middleware.java" />
-        <option value="$PROJECT_DIR$/src/middleware/WSMiddleware.java" />
-        <option value="$PROJECT_DIR$/src/middleware/MiddlewareClient.java" />
-        <option value="$PROJECT_DIR$/src/middleware/MiddlewareManager.java" />
-        <option value="$PROJECT_DIR$/build/classes/client/ResourceManager.java" />
-        <option value="$PROJECT_DIR$/etc/sun-jaxws-middleware.xml" />
-        <option value="$PROJECT_DIR$/src/middleware/sun-jaxws.xml" />
-        <option value="$PROJECT_DIR$/src/middleware/MiddlewareManagerImpl.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/client/Client.java" />
+        <option value="$PROJECT_DIR$/src/middleware/MiddlewareServer.java" />
+        <option value="$PROJECT_DIR$/src/middleware/MiddlewareImpl.java" />
         <option value="$PROJECT_DIR$/src/client/WSClient.java" />
+        <option value="$PROJECT_DIR$/src/client/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/server/ws/Main.java" />
+        <option value="$PROJECT_DIR$/src/server/ResourceManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/server/ws/ServerThread.java" />
+        <option value="$PROJECT_DIR$/src/client/ClientMain.java" />
         <option value="$PROJECT_DIR$/src/middleware/ResourceManagerImpl.java" />
       </list>
     </option>
@@ -163,7 +680,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-48" />
+    <option name="x" value="6" />
     <option name="y" value="22" />
     <option name="width" value="1260" />
     <option name="height" value="703" />
@@ -191,85 +708,33 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="middle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="middle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -283,11 +748,37 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ServerThread.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="p1-TCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -305,11 +796,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -323,11 +814,33 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="middleware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResourceManagerImpl.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="p1-TCP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -341,11 +854,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
+              <option name="myItemId" value="p1-TCP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -357,68 +870,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="etc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/middleware" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/middleware" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="middleware" />
     </key>
   </component>
   <component name="RunManager">
@@ -678,32 +1148,30 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f499d9f5-0853-4832-ba9d-a8d10b5eb6c3" name="Default" comment="" />
-      <created>1443642156826</created>
+      <changelist id="f0b9614d-a1c8-4019-8deb-10c64dfcc5ad" name="Default" comment="" />
+      <created>1443818878979</created>
       <option name="number" value="Default" />
-      <updated>1443642156826</updated>
-      <workItem from="1443642159223" duration="4983000" />
-      <workItem from="1443666801936" duration="3639000" />
-      <workItem from="1443709701631" duration="7770000" />
-      <workItem from="1443730764867" duration="7268000" />
-      <workItem from="1443739365354" duration="511000" />
-      <workItem from="1443740189367" duration="17230000" />
+      <updated>1443818878979</updated>
+      <workItem from="1443818880406" duration="243000" />
+      <workItem from="1443820948600" duration="242000" />
+      <workItem from="1443826985412" duration="2446000" />
+      <workItem from="1443836574886" duration="28901000" />
+      <workItem from="1443924904009" duration="16503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41401000" />
+    <option name="totallyTimeSpent" value="48335000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-48" y="22" width="1260" height="703" extended-state="0" />
-    <editor active="true" />
+    <frame x="6" y="22" width="1260" height="703" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -711,28 +1179,34 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17021276" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -740,212 +1214,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/middleware/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="157" column="39" selection-start-line="157" selection-start-column="39" selection-end-line="157" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/WSClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/flight/WEB-INF/sun-jaxws.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/middleware/ResourceManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5517#5518#0" expanded="true" />
-            <element signature="e#5541#5542#0" expanded="true" />
-            <element signature="e#5646#5647#0" expanded="true" />
-            <element signature="e#5670#5671#0" expanded="true" />
-            <element signature="e#5744#5745#0" expanded="true" />
-            <element signature="e#5772#5773#0" expanded="true" />
-            <element signature="e#5847#5848#0" expanded="true" />
-            <element signature="e#5875#5876#0" expanded="true" />
-            <element signature="e#5952#5953#0" expanded="true" />
-            <element signature="e#5979#5980#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ResourceManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="150" column="41" selection-start-line="150" selection-start-column="41" selection-end-line="150" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/etc/sun-jaxws.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/etc/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ws/ResourceManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <caret line="773" column="55" selection-start-line="773" selection-start-column="55" selection-end-line="773" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/WSClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ws/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ws/ResourceManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="140" column="4" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/WSClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ResourceManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ws/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/etc/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -962,211 +1237,186 @@
     <entry file="file://$PROJECT_DIR$/src/server/ws/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Car.java">
+    <entry file="file://$PROJECT_DIR$/src/client/ClientMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/WSClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ws/ServerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="14" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/RMHashtable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="119" column="23" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/rm/WEB-INF/classes/server/Car.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12864494">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/middle/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5917667">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/rm/WEB-INF/sun-jaxws.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23156089">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/flight/WEB-INF/sun-jaxws.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/etc/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/etc/sun-jaxws.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware/sun-jaxws.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Flight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12864494">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ws/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30874786">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.051457975">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapps/middle/WEB-INF/sun-jaxws.xml">
+    <entry file="file://$PROJECT_DIR$/src/client/ClientMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/WSClient.java">
+    <entry file="file://$PROJECT_DIR$/src/middleware/ResourceManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <caret line="241" column="0" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.962963">
-          <caret line="120" column="29" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3703704">
-          <caret line="167" column="44" selection-start-line="167" selection-start-column="44" selection-end-line="167" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ws/ResourceManager.java">
+    <entry file="file://$PROJECT_DIR$/src/server/ReservedItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/ResourceManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.62963">
-          <caret line="168" column="57" selection-start-line="168" selection-start-column="15" selection-end-line="168" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="393" column="6" selection-start-line="393" selection-start-column="6" selection-end-line="393" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/middleware/ResourceManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4665523">
-          <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="162" column="65" selection-start-line="162" selection-start-column="65" selection-end-line="162" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5517#5518#0" expanded="true" />
-            <element signature="e#5541#5542#0" expanded="true" />
-            <element signature="e#5646#5647#0" expanded="true" />
-            <element signature="e#5670#5671#0" expanded="true" />
-            <element signature="e#5744#5745#0" expanded="true" />
-            <element signature="e#5772#5773#0" expanded="true" />
-            <element signature="e#5847#5848#0" expanded="true" />
-            <element signature="e#5875#5876#0" expanded="true" />
-            <element signature="e#5952#5953#0" expanded="true" />
-            <element signature="e#5979#5980#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ReservedItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327338">
+          <caret line="172" column="71" selection-start-line="172" selection-start-column="65" selection-end-line="172" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18010291">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/RMHashtable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ResourceManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.66831684">
+          <caret line="143" column="51" selection-start-line="143" selection-start-column="51" selection-end-line="143" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ws/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74614066">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ws/ResourceManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.95197254">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ws/ServerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.333334">
+          <caret line="98" column="32" selection-start-line="98" selection-start-column="32" selection-end-line="98" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/ClientMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4190648">
+          <caret line="410" column="53" selection-start-line="410" selection-start-column="53" selection-end-line="410" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/middleware/ResourceManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.315609">
+          <caret line="538" column="0" selection-start-line="538" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1223,7 +1473,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>p1</last-edited>
+          <last-edited>p1-TCP</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

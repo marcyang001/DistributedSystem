@@ -9,7 +9,7 @@ import java.util.*;
 import javax.jws.WebService;
 
 
-@WebService(endpointInterface = "server.ws.ResourceManager")
+
 public class ResourceManagerImpl implements server.ws.ResourceManager {
     
     protected RMHashtable m_itemHT = new RMHashtable();
@@ -378,6 +378,7 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
     // Return data structure containing customer reservation info. 
     // Returns null if the customer doesn't exist. 
     // Returns empty RMHashtable if customer exists but has no reservations.
+    /*
     public RMHashtable getCustomerReservations(int id, int customerId) {
         Trace.info("RM::getCustomerReservations(" + id + ", " 
                 + customerId + ") called.");
@@ -390,7 +391,7 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
             return cust.getReservations();
         }
     }
-
+    */
     // Return a bill.
     @Override
     public String queryCustomerInfo(int id, int customerId) {
@@ -412,7 +413,8 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
     // Add flight reservation to this customer.  
     @Override
     public boolean reserveFlight(int id, int customerId, int flightNumber) {
-        return reserveItem(id, customerId, 
+
+        return reserveItem(id, customerId,
                 Flight.getKey(flightNumber), String.valueOf(flightNumber));
     }
 

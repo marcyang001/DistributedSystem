@@ -1,15 +1,12 @@
 package main;
 
-import java.io.File;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.startup.Tomcat;
-import server.Car;
+import middleware.ResourceManagerImpl;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        System.out.println("This is the main method for tomcat");
+        System.out.println("Starting the middleware thread");
 
         if (args.length != 3) {
             System.out.println(
@@ -20,23 +17,17 @@ public class Main {
         String serviceName = args[0];
         int port = Integer.parseInt(args[1]);
         String deployDir = args[2];
+
+        ResourceManagerImpl middleware = new ResourceManagerImpl(port);
+        Thread t = new Thread (middleware);
+        t.start();
+
+
+
+
+
     
-        Tomcat tomcat = new Tomcat();
-        tomcat.setPort(port);
-        tomcat.setBaseDir(deployDir);
 
-        tomcat.getHost().setAppBase(deployDir);
-        tomcat.getHost().setDeployOnStartup(true);
-        tomcat.getHost().setAutoDeploy(true);
-
-
-        //tomcat.addWebapp("", new File(deployDir).getAbsolutePath());
-
-        tomcat.addWebapp("/" + serviceName, 
-                new File(deployDir + "/" + serviceName).getAbsolutePath());
-
-        tomcat.start();
-        tomcat.getServer().await();
 
 
 
