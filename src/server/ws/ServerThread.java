@@ -393,7 +393,8 @@ class ServerResponseThread implements Runnable {
                     e.printStackTrace();
                 }
                 break;
-/*
+
+            /*
             case 13: //querying Customer Information
                 if (arguments.size() != 3) {
                     wrongNumber();
@@ -414,7 +415,7 @@ class ServerResponseThread implements Runnable {
                     e.printStackTrace();
                 }
                 break;
-*/
+            */
 
             case 14: //querying a flight Price
                 if (arguments.size() != 3) {
@@ -481,7 +482,7 @@ class ServerResponseThread implements Runnable {
                     e.printStackTrace();
                 }
                 break;
-/*
+
             case 17:  //reserve a flight
                 if (arguments.size() != 4) {
                     wrongNumber();
@@ -495,7 +496,7 @@ class ServerResponseThread implements Runnable {
                     int customer = getInt(arguments.elementAt(2));
                     flightNumber = getInt(arguments.elementAt(3));
 
-                    if (proxy.reserveFlight(id, customer, flightNumber))
+                    if (m_proxy.reserveFlight(id, customer, flightNumber))
                         System.out.println("Flight Reserved");
                     else
                         System.out.println("Flight could not be reserved.");
@@ -520,7 +521,7 @@ class ServerResponseThread implements Runnable {
                     int customer = getInt(arguments.elementAt(2));
                     location = getString(arguments.elementAt(3));
 
-                    if (proxy.reserveCar(id, customer, location))
+                    if (m_proxy.reserveCar(id, customer, location))
                         System.out.println("car Reserved");
                     else
                         System.out.println("car could not be reserved.");
@@ -545,7 +546,7 @@ class ServerResponseThread implements Runnable {
                     int customer = getInt(arguments.elementAt(2));
                     location = getString(arguments.elementAt(3));
 
-                    if (proxy.reserveRoom(id, customer, location))
+                    if (m_proxy.reserveRoom(id, customer, location))
                         System.out.println("room Reserved");
                     else
                         System.out.println("room could not be reserved.");
@@ -579,7 +580,7 @@ class ServerResponseThread implements Runnable {
                     car = getBoolean(arguments.elementAt(arguments.size()-2));
                     room = getBoolean(arguments.elementAt(arguments.size()-1));
 
-                    if (proxy.reserveItinerary(id, customer, flightNumbers,
+                    if (m_proxy.reserveItinerary(id, customer, flightNumbers,
                             location, car, room))
                         System.out.println("Itinerary Reserved");
                     else
@@ -591,7 +592,6 @@ class ServerResponseThread implements Runnable {
                     e.printStackTrace();
                 }
                 break;
-*/
 
             case 21:  //quit the client
                 if (arguments.size() != 1) {
@@ -601,7 +601,7 @@ class ServerResponseThread implements Runnable {
                 System.out.println("Quitting client.");
                 return;
 
-            /*
+/*
             case 22:  //new Customer given id
                 if (arguments.size() != 3) {
                     wrongNumber();
@@ -613,7 +613,7 @@ class ServerResponseThread implements Runnable {
                     id = getInt(arguments.elementAt(1));
                     int customer = getInt(arguments.elementAt(2));
 
-                    boolean c = proxy.newCustomerId(id, customer);
+                    boolean c = m_proxy.newCustomerId(id, customer);
                     System.out.println("new customer id: " + customer);
                 }
                 catch(Exception e) {
@@ -622,8 +622,85 @@ class ServerResponseThread implements Runnable {
                     e.printStackTrace();
                 }
                 break;
+*/
 
-            */
+
+            case 23:
+                try {
+                    id = getInt(arguments.elementAt(1));
+                    String key = getString(arguments.elementAt(2));
+                    boolean status = m_proxy.updateItemInfo("", 0, id, key);
+                    out = new DataOutputStream(m_server.getOutputStream());
+                    if (status) {
+                        System.out.println("Item updated");
+                        out.writeUTF("item updated");
+                    }
+                    else {
+                        System.out.println("FAIL to update item");
+                        out.writeUTF("Server could not update item");
+                    }
+
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            case 24:
+                String flightKey = "";
+                try {
+                    int flightnumber = getInt(arguments.elementAt(1));
+                    flightKey = m_proxy.getFlightKey(flightnumber);
+                    out = new DataOutputStream(m_server.getOutputStream());
+                    out.writeUTF(flightKey);
+                    //System.out.println("Get the flight key: " + flightKey);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            case 25:
+                String carKey = "";
+                try {
+                    location = getString(arguments.elementAt(1));
+                    carKey = m_proxy.getCarKey(location);
+                    out = new DataOutputStream(m_server.getOutputStream());
+                    out.writeUTF(carKey);
+                    //System.out.println("Get the car key: " + carKey);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            case 26:
+
+                try {
+                    location = getString(arguments.elementAt(1));
+                    String roomKey = m_proxy.getRoomKey(location);
+                    out = new DataOutputStream(m_server.getOutputStream());
+                    out.writeUTF(roomKey);
+                    //System.out.println("Get the room key: " + roomKey);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            case 27:
+                //updateDeleteCustomer(String host, int port, int id, String key, int count)
+                String deletekey;
+                int count;
+                boolean status;
+                try {
+                    id = getInt(arguments.elementAt(1));
+                    deletekey = getString(arguments.elementAt(2));
+                    count = getInt(arguments.elementAt(3));
+                    out = new DataOutputStream(m_server.getOutputStream());
+                    status = m_proxy.updateDeleteCustomer("", 0, id, deletekey,count);
+                    if (status) {
+                        System.out.println("Successfully deleted customer related reservations");
+                    }
+                    else {
+                        System.out.println("FAIL to delete customer related reservations");
+                    }
+                    out.writeBoolean(status);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
 
             default:
@@ -636,19 +713,6 @@ class ServerResponseThread implements Runnable {
                 break;
         }
 
-
-
-
-
-
-        /*
-
-        synchronized (this) {
-            m_proxy.addFlight(1, 1, 1, 1);
-        }
-
-
-        */
 
 
 
@@ -700,6 +764,16 @@ class ServerResponseThread implements Runnable {
             return 21;
         else if (argument.compareToIgnoreCase("newcustomerid") == 0)
             return 22;
+        else if (argument.compareToIgnoreCase("updateiteminfo") == 0)
+            return 23;
+        else if (argument.compareToIgnoreCase("getflightkey") == 0)
+            return 24;
+        else if (argument.compareToIgnoreCase("getcarkey") == 0)
+            return 25;
+        else if (argument.compareToIgnoreCase("getroomkey") == 0)
+            return 26;
+        else if (argument.compareToIgnoreCase("updatedeletecustomer") == 0)
+            return 27;
         else
             return 666;
     }

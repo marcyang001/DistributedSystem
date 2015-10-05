@@ -163,6 +163,8 @@ public class ClientMain {
                             try {
                                 //client sends the newcustomer,1 command to the middleware
                                 out.writeUTF(command);
+                                int customerID = inFromMiddleware.readByte();
+                                System.out.println("MESSAGE: new customer id: " + customerID);
 
                             } catch (Exception e) {
                                 System.out.println("EXCEPTION: ");
@@ -244,10 +246,13 @@ public class ClientMain {
                             System.out.println("Deleting a customer from the database using id: " + arguments.elementAt(1));
                             System.out.println("Customer id: " + arguments.elementAt(2));
                             try {
-
                                 //send the deletecustomer,1
                                 out.writeUTF(command);
-
+                                boolean respStatus = inFromMiddleware.readBoolean();
+                                if (respStatus)
+                                    System.out.println("MESSAGE: Customer deleted");
+                                else
+                                    System.out.println("MESSAGE: Customer not deleted");
 
                             } catch (Exception e) {
                                 System.out.println("EXCEPTION: ");
@@ -339,6 +344,9 @@ public class ClientMain {
                         try {
                             //send a querying customer
                             out.writeUTF(command);
+
+                            String resp = inFromMiddleware.readUTF();
+                            System.out.println(resp);
 
                         }
                         catch(Exception e) {
@@ -439,6 +447,13 @@ public class ClientMain {
                         try {
                             //send reserve flight command
                             out.writeUTF(command);
+                            boolean resp = inFromMiddleware.readBoolean();
+                            if (resp) {
+                                System.out.println("MESSAGE: Flight reserved");
+                            }
+                            else {
+                                System.out.println("MESSAGE: Flight could not be reserved");
+                            }
                         }
                         catch(Exception e) {
                             System.out.println("EXCEPTION: ");
@@ -460,6 +475,8 @@ public class ClientMain {
                         try {
                             //send reserve a car request
                             out.writeUTF(command);
+                            String resp = inFromMiddleware.readUTF();
+                            System.out.println(resp);
                         }
                         catch(Exception e) {
                             System.out.println("EXCEPTION: ");
@@ -481,6 +498,8 @@ public class ClientMain {
                         try {
                             //send reserver a room request
                             out.writeUTF(command);
+                            String resp = inFromMiddleware.readUTF();
+                            System.out.println(resp);
                         }
                         catch(Exception e) {
                             System.out.println("EXCEPTION: ");
@@ -501,6 +520,8 @@ public class ClientMain {
                             //send itinerary command
                             out.writeUTF(command);
 
+                            //receive confirmation
+                            inFromMiddleware.readUTF();
                         }
                         catch(Exception e) {
                             System.out.println("EXCEPTION: ");
@@ -527,6 +548,11 @@ public class ClientMain {
                         try {
                             //send new customer given id
                             out.writeUTF(command);
+
+                            //receive message from the middleware
+                            String resp = inFromMiddleware.readUTF();
+                            System.out.println(resp);
+
                         }
                         catch(Exception e) {
                             System.out.println("EXCEPTION: ");
@@ -535,7 +561,7 @@ public class ClientMain {
                         }
                     }
                     else {
-                        System.out.println("The interface does not support this command.");
+                        System.out.println("MESSAGE: The interface does not support this command.");
                         command = "wrongcommand";
                         out.writeUTF(command);
                     }
@@ -833,8 +859,8 @@ public class ClientMain {
     }
 
     public void wrongNumber() {
-        System.out.println("The number of arguments provided in this command are wrong.");
-        System.out.println("Type help, <commandname> to check usage of this command.");
+        System.out.println("MESSAGE: The number of arguments provided in this command are wrong.");
+        System.out.println("MESSAGE: Type help, <commandname> to check usage of this command.");
     }
 
     public int getInt(Object temp) throws Exception {

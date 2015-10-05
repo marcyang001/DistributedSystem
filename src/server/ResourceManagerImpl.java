@@ -10,6 +10,7 @@ import javax.jws.WebService;
 
 
 
+
 public class ResourceManagerImpl implements server.ws.ResourceManager {
     
     protected RMHashtable m_itemHT = new RMHashtable();
@@ -437,5 +438,55 @@ public class ResourceManagerImpl implements server.ws.ResourceManager {
                                     String location, boolean car, boolean room) {
         return false;
     }
+
+    @Override
+    public String getFlightKey(int flightNumber) {
+        return Flight.getKey(flightNumber);
+    }
+
+    @Override
+    public String getCarKey(String location) {
+        return Car.getKey(location);
+    }
+
+    @Override
+    public String getRoomKey(String location) {
+        return Room.getKey(location);
+    }
+
+    @Override
+    public boolean updateItemInfo(String serverhost, int port, int id, String key) {
+        ReservableItem item = (ReservableItem) readData(id, key);
+
+        if (item == null) {
+            Trace.warn("RM::reserveItem(" + id + ", "
+                    + key + ",) failed: item doesn't exist.");
+            return false;
+        }
+        else {
+            item.setCount(item.getCount() - 1);
+            item.setReserved(item.getReserved() + 1);
+            return true;
+        }
+    }
+
+
+
+
+    @Override
+    public boolean updateDeleteCustomer(String host, int port, int id, String key, int count) {
+        ReservableItem item = (ReservableItem) readData(id,key);
+        if (item == null){
+//            error
+            return false;
+        }
+        item.setReserved(item.getReserved() - count);
+        item.setCount(item.getCount() + count);
+
+        Trace.info(key + " reserved/available = "
+                + item.getReserved() + "/" + item.getCount());
+        return true;
+    }
+
 
 }
