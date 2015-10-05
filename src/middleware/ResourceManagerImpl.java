@@ -1435,17 +1435,21 @@ class middlewareResponseThread implements server.ws.ResourceManager, Runnable{
 
             while(it.hasNext()){
                 if(!(reserveFlight(id,customerId,Integer.parseInt((String)it.next())))){
+                    Trace.warn("RM::reserveItem(" + id +"," + customerId + "," + location + ") failed: no more seats available");
                     //error
-                    return false;
                 }
             }
             //there is a car
-            if(!car){
+            if(car && room){
                 reserveCar(id,customerId,location);
+                reserveRoom(id,customerId,location);
             }
             //there is a room
-            else if (!room){
+            else if (room){
                 reserveRoom(id,customerId,location);
+            }
+            else if(car){
+                reserveCar(id,customerId,location);
             }
             return true;
         }
