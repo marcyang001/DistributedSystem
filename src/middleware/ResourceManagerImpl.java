@@ -21,10 +21,22 @@ public class ResourceManagerImpl implements Runnable{
 
     protected RMHashtable itemHT = new RMHashtable();
 
-    //constructor that starts the middleware as a server for accepting requests from client
-    public ResourceManagerImpl(int port) {
-        this.serverPort = port;
+    String f_host;
+    int f_port;
+    String c_host;
+    int c_port;
+    String r_host;
+    int r_port;
 
+    //constructor that starts the middleware as a server for accepting requests from client
+    public ResourceManagerImpl(int servicePort, String flighthost, int flightport, String carhost, int carport, String roomhost, int roomport) {
+        this.serverPort = servicePort;
+        this.f_host = flighthost;
+        this.f_port = flightport;
+        this.c_host = carhost;
+        this.c_port = carport;
+        this.r_host = roomhost;
+        this.r_port = roomport;
 
     }
 
@@ -43,7 +55,7 @@ public class ResourceManagerImpl implements Runnable{
                 System.out.println("Middleware just connected to: " + clientSocket.getRemoteSocketAddress());
 
                 //invoke the data input/output thread
-                middleResponse = new middlewareResponseThread(clientSocket, itemHT);
+                middleResponse = new middlewareResponseThread(clientSocket, itemHT, f_host, f_port, c_host, c_port, r_host, r_port);
 
                 Thread inputOutput = new Thread(middleResponse);
                 inputOutput.start();
@@ -89,14 +101,14 @@ public class ResourceManagerImpl implements Runnable{
     //inner class for the middleware client thread (thread use for sending commands to server
 class middlewareResponseThread implements server.ws.ResourceManager, Runnable{
 
-        String f_host = "localhost";
-        int f_port = 8080;
+        String f_host;
+        int f_port;
 
-        String c_host = "localhost";
-        int c_port = 8082;
+        String c_host;
+        int c_port;
 
-        String r_host = "localhost";
-        int r_port = 8084;
+        String r_host;
+        int r_port;
 
         //clients[0] for flight server
         //clients[1] for car server
@@ -113,10 +125,16 @@ class middlewareResponseThread implements server.ws.ResourceManager, Runnable{
         Vector arguments = new Vector();
 
 
-        public middlewareResponseThread(Socket server, RMHashtable RMtable) {
+        public middlewareResponseThread(Socket server, RMHashtable RMtable, String f_host, int f_port, String c_host, int c_port, String r_host, int r_port) {
 
             this.m_server = server;
             this.m_itemHT = RMtable;
+            this.f_host = f_host;
+            this.f_port = f_port;
+            this.c_host = c_host;
+            this.c_port = c_port;
+            this.r_host = r_host;
+            this.r_port = r_port;
         }
 
 
@@ -1435,7 +1453,7 @@ class middlewareResponseThread implements server.ws.ResourceManager, Runnable{
 
             while(it.hasNext()){
                 if(!(reserveFlight(id,customerId,Integer.parseInt((String)it.next())))){
-                    Trace.warn("RM::reserveItem(" + id +"," + customerId + "," + location + ") failed: no more seats available");
+                    Trace.warn("RM::reserveItem(" + id + "," + customerId + "," + location + ") failed: no more seats available");
                     //error
                 }
             }

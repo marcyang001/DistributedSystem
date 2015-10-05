@@ -10,6 +10,14 @@
     <property name="middleware.host" value="localhost"/>
     <property name="middleware.port" value="6666"/>
 
+    <property name="flight.host" value="localhost"/>
+    <property name="flight.port" value="8080"/>
+
+    <property name="car.host" value="localhost"/>
+    <property name="car.port" value="8082"/>
+
+    <property name="room.host" value="localhost"/>
+    <property name="room.port" value="8084"/>
 
 
 
@@ -164,16 +172,21 @@
 
 
     <target name="start-tomcat-middleware" depends="build-main">
-        <echo message="Starting Tomcat and deploying service ... "/>
+        <echo message="Starting Middleware Socket and deploying service ... "/>
         <java fork="true" classname="main.Main">
             <classpath>
                 <path refid="jaxws.classpath"/>
                 <pathelement location="${basedir}/build/"/>
             </classpath>
             <jvmarg value="-Djava.security.policy=${basedir}/etc/server.policy"/>
-            <arg value="${middleware.name}"/>
+            <arg value="${middleware.host}"/>
             <arg value="${middleware.port}"/>
-            <arg value="${basedir}/webapps"/>
+            <arg value="${flight.host}"/>
+            <arg value="${flight.port}"/>
+            <arg value="${car.host}"/>
+            <arg value="${car.port}"/>
+            <arg value="${room.host}"/>
+            <arg value="${room.port}"/>
         </java>
     </target>
 
