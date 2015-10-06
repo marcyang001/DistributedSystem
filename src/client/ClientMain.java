@@ -71,7 +71,12 @@ public class ClientMain {
                     DataInputStream inFromMiddleware = new DataInputStream(client.getInputStream());
                     command = stdin.readLine();
                     command = command.trim();
+                    //to avoid crash caused by empty string input
+                    if (command.isEmpty()) {
+                        command = "wrongcommand";
+                    }
                     arguments = parse(command);
+
                     int value = findChoice((String) arguments.elementAt(0));
 
                     if (value == 1) {
@@ -566,7 +571,7 @@ public class ClientMain {
                         out.writeUTF(command);
                     }
 
-                    client.close();
+                    //client.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
