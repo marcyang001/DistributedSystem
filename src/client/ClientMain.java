@@ -15,8 +15,6 @@ public class ClientMain {
     public static void main(String[] args) {
 
 
-        BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
-        String command = "";
         try {
 
             if (args.length != 3) {

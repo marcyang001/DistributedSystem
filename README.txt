@@ -1,4 +1,4 @@
-Author: Muhammad Yousuf Ahmad
+
 Date:   September 20, 2015
 
 COMP 512: Distributed Systems
